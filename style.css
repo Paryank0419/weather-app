@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
 *, *::after, *::before{
     box-sizing: border-box;
 }
@@ -22,9 +24,14 @@ body{
 
 }
 h1, h2{
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
 }
+h3{
+    font-family: 'Montserrat', sans-serif;
+}
 p{
+    font-family: 'Montserrat', sans-serif;
     margin: var(--spacing-medium);
 }
 
@@ -45,7 +52,6 @@ p{
 }
 
 .container, .container>article{
-    border: 1px solid;
     border-radius: var(--spacing-regular);
     padding: var(--spacing-regular);
 }
@@ -60,7 +66,11 @@ p{
     border-radius: var(--font-regular);
     padding: var(--spacing-medium);
     background: rgba(229, 228, 226, 0.4);
-
+    text-align: center;
+    border: none;
+}
+#search:focus{
+    outline: none;
 }
 #current-forecast{
     grid-area: current;
@@ -156,12 +166,24 @@ p{
     grid-area: feelslike;
     text-align: center;
     justify-items: center;
+    display: grid;
 }
 #humidity{
     grid-area: humidity;
     text-align: center;
+    display: grid;  
     justify-items: center;
 
+}
+
+#humidity p, #feels-like p{
+    margin: auto;
+    font-size: var(--font-regular);
+    
+}
+#humidity h3, #feels-like h3{
+    margin: auto;
+    font-size: var(--font-large);
 }
 
 
